@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GURD Project</title>
+    <!-- !---CSS-Style--- -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/Style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="w-75 mx-auto py-3">
+                
+                <!-- ?---Product-Name-- -->
+                <div class="input-form mt-3">
+                    <label for="pName" class="py-2">Product Name : </label>
+                    <input type="text" class="form-control " id="pName" placeholder="'Enter Product Name.....">
+                </div>
+
+                <!-- ?---Product-Name-- -->
+                <div class="input-form mt-3">
+                    <label for="pPrice" class="py-2">Product Price : </label>
+                    <input type="number" class="form-control " id="pPrice" placeholder="'Enter Product Price.....">
+                </div>
+                    
+                <!-- ?---Product-Name-- -->
+                <div class="input-form mt-3">
+                    <label for="pModel" class="py-2">Product Model : </label>
+                    <input type="text" class="form-control " id="pModel" placeholder="'Enter Product Model.....">
+                </div>
+                    
+                <!-- ?---Product-Name-- -->
+                <div class="input-form mt-3">
+                    <label for="pDesc" class="py-2">Product Discription : </label>
+                    <textarea name="pDesc" class="form-control t-Area" id="pDesc" placeholder ="Enter The Product Description....." cols="30" rows="10"></textarea>
+                </div>
+                
+                <button onclick="addProduct()" type="button" id="AddProductBtn" class="btn btn-outline-primary my-4">Add Product</button>
+                <button onclick="updateItems()" type="button" id="UpdateProductBtn" class="btn btn-outline-success d-none  my-4">UpDate Product</button>
+                
+            </div>
+
+            <input type="text" oninput="searchByProductName(this.value)" class="form-control" placeholder="Search Place...">
+
+            <table class="table mx-auto text-center my-4">
+                <thead>
+                    <th>Index</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Model</th>
+                    <th>Product Descreption</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+
+                <tbody id="bodyData" >
+                    
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <!-- !----JS-File--- -->
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/main.js"></script>
+</body>
+</html>
